@@ -34,7 +34,7 @@ function StatItem({ s, inView, i }: { s: typeof STATS[0]; inView: boolean; i: nu
   return (
     <div className={`flex flex-col items-center text-center py-10 px-6 ${notFirst ? "border-l border-gold/20" : ""}`}>
       <div className="font-display text-5xl md:text-6xl text-gold">{display}</div>
-      <div className="mt-3 eyebrow text-ink/50">{s.label}</div>
+      <div className="mt-3 eyebrow text-ink/70">{s.label}</div>
     </div>
   );
 }

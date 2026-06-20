@@ -44,7 +44,7 @@ export function About() {
             <br />
             <span className="italic text-gold">berharga dalam hidup Anda.</span>
           </h2>
-          <p className="mt-7 text-ink/65 leading-relaxed text-base md:text-lg">
+          <p className="mt-7 text-ink/85 leading-relaxed text-base md:text-lg">
             {BRAND.aboutDesc}
           </p>
           <ul className="mt-9 grid sm:grid-cols-2 gap-3">
