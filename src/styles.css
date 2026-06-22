@@ -59,10 +59,21 @@
   --section-alt: #161310;
 }
 
+/* ── Light mode override ────────────────────── */
+html:not(.dark) {
+  --bg:        #F5F0E8;
+  --ink:       #1A1410;
+  --blush:     #EDE8DC;
+  --card-bg:   #FFFFFF;
+  --border-clr: rgba(26,20,16,0.12);
+  --muted-txt: #6B5E50;
+  --section-alt: #EDE8DC;
+}
+
 /* ── Base ────────────────────────────────────── */
 @layer base {
   *, *::before, *::after { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: auto; }
 
   body {
     background-color: var(--bg);
@@ -139,3 +150,31 @@ body::after {
 
 .section-alt  { background: var(--blush); }
 .section-dark { background: #060504; }
+
+/* ── Custom cursor ─────────────────────────── */
+.cursor-dot {
+  position: fixed;
+  top: 0; left: 0;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+  pointer-events: none;
+  z-index: 9990;
+  will-change: transform;
+}
+
+.cursor-ring {
+  position: fixed;
+  top: 0; left: 0;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(212,168,67,0.5);
+  pointer-events: none;
+  z-index: 9989;
+  will-change: transform;
+  transition: width 0.25s, height 0.25s, opacity 0.25s;
+}
+
+@media (hover: none) {
+  .cursor-dot, .cursor-ring { display: none; }
+}
