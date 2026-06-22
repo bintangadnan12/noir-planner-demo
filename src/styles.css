@@ -37,6 +37,7 @@
   --color-border:             var(--border-clr);
   --color-input:              var(--border-clr);
   --color-ring:               var(--gold);
+  --color-always-dark:        var(--always-dark);
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -47,6 +48,9 @@
 /* ── CSS variables — Noir (Obsidian/Gold) ───── */
 :root {
   --radius: 0rem;
+
+  --always-dark:         #0A0806;
+  --always-dark-overlay: rgba(10,8,6,0.88);
 
   --bg:        #0E0C0A;
   --gold:      #D4A843;
